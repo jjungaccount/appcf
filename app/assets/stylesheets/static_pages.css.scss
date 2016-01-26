@@ -10,6 +10,17 @@ html, body {
   height: 100%;
 }
 
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
 .navbar {
   border-bottom: 1px solid #eee;
 }
@@ -23,20 +34,17 @@ h1 {
   font-style: italic;
   color: #34495e;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  margin-top: 100px;
+  padding-top: 50px;
 }
 
 h2 {
   font-size: 2em;
 }
 
-.wrapper {
-  min-height: 100%;
-  margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+.site-footer, .page-wrap:after {
+  height: 50px; 
 }
 
-footer {
-  height: 50px;
+.site-footer {
   border-top: 1px solid #eee;
-  margin-top: 50px;
 }
