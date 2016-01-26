@@ -1,3 +1,42 @@
 // Place all the styles related to the static_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.navbar {
+  border-bottom: 1px solid #eee;
+}
+
+.navbar a {
+  color: #34495e;
+}
+
+h1 {
+  font-size: 3em;
+  font-style: italic;
+  color: #34495e;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin-top: 100px;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -50px; /* the bottom margin is the negative value of the footer's height */
+}
+
+footer {
+  height: 50px;
+  border-top: 1px solid #eee;
+  margin-top: 50px;
+}
