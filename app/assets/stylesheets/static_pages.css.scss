@@ -25,7 +25,7 @@ html, body {
   border-bottom: 1px solid #eee;
 }
 
-.navbar a {
+.navbar a, h1, h2, .site-footer p{
   color: #34495e;
 }
 
@@ -36,7 +36,6 @@ html, body {
 h1 {
   font-size: 3em;
   font-style: italic;
-  color: #34495e;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
@@ -51,8 +50,6 @@ h1, h2, .my-image, .site-footer p {
 
 .site-footer, .page-wrap:after {
   height: 50px; 
-}
-
-.site-footer {
   border-top: 1px solid #eee;
 }
+
