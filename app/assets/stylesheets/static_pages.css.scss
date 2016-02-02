@@ -34,7 +34,6 @@ html, body {
 }
 
 h1 {
-  font-size: 3em;
   font-style: italic;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
@@ -43,10 +42,17 @@ h2 {
   font-size: 2em;
 }
 
-h1, h2, .my-image, .site-footer p {
+h1, h2, .product_table th, a, .site-footer p {
   margin: 0;
   padding: 15px 0 0 15px;
 } 
+
+a, a:visited, a:hover {
+  color: #ff0000;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+}
 
 .site-footer, .page-wrap:after {
   height: 50px; 
