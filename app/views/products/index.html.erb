@@ -5,20 +5,11 @@
   <!-- <p>This is paragraph number <%# paragraph_number %></p> 
   <%# paragraph_number = paragraph_number + 1 %> -->
 <%# end %>
-
-  <div class="container-fluid">
-    <div class="row">
-      <% @products.each do |product| %>
-        <div class="item col-sm-6 col-md-3">
-          <%= image_tag(product.image_url, class: "img-responsive") %>
-          <h2><%= product.name %></h2>
-          <p class="description"><%= product.description %></p>
-          <p class="price">$<%= product.price %></p>
-        </div>
-      <% end %>
-    </div>
+<div class="container-fluid">
+  <div class="row">
+    <%= render @products %>
   </div>
-
+</div>
 <br>
 
 <%= link_to '[ New Product ]', new_product_path %>
