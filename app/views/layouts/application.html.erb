@@ -32,6 +32,13 @@
           <li><a href="#sales">sales</a></li>
           <li><a href="/products">products</a></li>
           <li><a href="#contact">contact</a></li>
+          <li><%= form_tag("/products", method: "get", class: "product-search") do %>
+          <%= label_tag(:q, "Search for:") %>
+          <%= text_field_tag(:q) %>
+          <%= submit_tag("Search") %>
+          <% end %></li>
+          
+          
         </ul>
       </div> <!--end navbar-collapse -->
     </div> <!--end container-fluid -->
