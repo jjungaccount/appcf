@@ -26,11 +26,11 @@
       </div> <!--end navbar-header -->
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-left">
-          <li><a href="/">Home</a></li>
+          <li><%= link_to "Home", root_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#sales">sales</a></li>
-          <li><a href="/products">products</a></li>
+          <li><%= link_to "Products", products_path %></li>
           <li><a href="#contact">contact</a></li>
           <li><%= form_tag("/products", method: "get", class: "product-search") do %>
           <%= label_tag(:q, "Search for:") %>
