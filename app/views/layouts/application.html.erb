@@ -29,16 +29,18 @@
           <li><%= link_to "Home", root_path %></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#sales">sales</a></li>
-          <li><%= link_to "Products", products_path %></li>
-          <li><a href="#contact">contact</a></li>
-          <li><%= form_tag("/products", method: "get", class: "product-search") do %>
-          <%= label_tag(:q, "Search for:") %>
-          <%= text_field_tag(:q) %>
-          <%= submit_tag("Search") %>
-          <% end %></li>
-          
-          
+        
+          <li class: "nav-item"><%= link_to "Sales", "#Sales", class: "nav-link" %></li>
+          <li class: "nav-item"><%= link_to "Contact", "#Contact", class: "nav-link" %></li>
+          <li class: "nav-item"><%= link_to "Products", products_path, class: "nav-link" %></li>
+          <li class: "nav-item"><%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
+       
+          <div class="form-group">
+            <%= label_tag(:q, "Search for:") %>
+            <%= text_field_tag :q, params[:q], class: "form-control form-control-sm", type: "search"%>
+          </div>
+          <%= submit_tag "Search", class: "btn btn-default"%>
+          <% end %></li> 
         </ul>
       </div> <!--end navbar-collapse -->
     </div> <!--end container-fluid -->

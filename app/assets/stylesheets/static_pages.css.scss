@@ -27,10 +27,6 @@ html, body {
   border-bottom: 1px solid #eee;
 }
 
-.product-search {
-  padding: 12.5px;
-}
-
 /**** Products page ****/
 
 .static-page {
@@ -41,16 +37,16 @@ h1, .container-fluid {
   margin: 0px 15px 0px 15px;
 }
 
-h1, .static-page a, .item, .site-footer p {
+.edit_product, .new_product, .static-page a, .item_show {
+  margin-left: 15px;
+}
+
+h1, .static-page a, .item, .site-footer p, .edit_product, .new_product, .item_show {
   padding: 15px 30px 0 30px;
 } 
 
-h1 {
+h1, h2 {
   margin-top: 0;
-}
-
-h2, {
-  margin-top: 10px;
 }
 
 .img-responsive {
@@ -68,11 +64,11 @@ h2, {
 
 /*Typography*/
 
-.navbar a, .product-search, h1, .site-footer p{
+.navbar a, .form-group, h1, .site-footer p{
   color: #34495e;
 }
 
-h1, h2, .product-search label {
+h1, h2, .form-group label {
   font-family: verdana, arial, helvetica, sans-serif;
   font-weight: normal;
 }
@@ -95,6 +91,9 @@ h2 {
 
 .static-page a, .static-page a:visited, .static-page a:hover {
   color: red;
+}
+
+.static-page a, .static-page a:visited, .static-page a:hover, .navbar-nav li a, .navbar-nav li a:visited, .navbar-nav li a:hover, .navbar-nav li a:focus {
   text-decoration: none;
   background-color: transparent;
 }

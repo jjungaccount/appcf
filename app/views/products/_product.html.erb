@@ -1,7 +1,9 @@
 
 
 <div class="item col-sm-6 col-md-3">
-  <%= image_tag(product.image_url, class: "img-responsive") %>
+  <%= link_to "/products/" + product.id.to_s do %>
+    <%= image_tag(product.image_url, class: "img-responsive") %>
+  <% end %>
   <h2><%= product.name %></h2>
   <p class="description"><%= product.description %></p>
   <p class="price">$<%= product.price %></p>
