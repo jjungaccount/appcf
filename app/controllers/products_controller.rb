@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
         @products = Product.where("name ilike ?", "%#{search_term}%")
       end
     else
-      @products = Product.all
+      @products = Product.where("sold_date is null")
     end
   end
 
