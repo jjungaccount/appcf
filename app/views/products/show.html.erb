@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="item_show">
+<div class="item_show col-lg-4 col-sm-6 col-xs-8">
   <p>
     <strong>Name:</strong>
     <%= @product.name %>
@@ -36,6 +36,7 @@
     <%= @product.sold_date %>
   </p>
 
-  <%= link_to 'Edit', edit_product_path(@product) %> |
-  <%= link_to 'Back', products_path %>
 </div>
+
+  <%= button_to 'Edit', edit_product_path(@product), method: "get", class: "btn btn-success" %>
+  <%= button_to 'Back', products_path, method: "get", class: "btn btn-success" %>
