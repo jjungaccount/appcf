@@ -31,7 +31,7 @@
         <ul class="nav navbar-nav navbar-right">
         
           <li class: "nav-item"><%= link_to "Sales", "#Sales", class: "nav-link" %></li>
-          <li class: "nav-item"><%= link_to "Contact", "#Contact", class: "nav-link" %></li>
+          <li class: "nav-item"><%= link_to "Contact", static_pages_contact_path, class: "nav-link" %></li>
           <li class: "nav-item"><%= link_to "Products", products_path, class: "nav-link" %></li>
           <li class: "nav-item"><%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
        

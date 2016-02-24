@@ -37,13 +37,13 @@ h1, .container-fluid {
   margin: 0px 15px 0px 15px;
 }
 
-.edit_product, .new_product, .item_show {
+.contact_us, .edit_product, .new_product, .item_show {
   background: #e5ede8;
   border: 1px solid #325050;
   margin: 30px 50px 50px 50px;
 }
 
-h1, .static-page a, .item, .site-footer p, .edit_product, .new_product, .item_show, #notice {
+h1, .static-page a, .item, .site-footer p, .contact_us, .edit_product, .new_product, .item_show, #notice {
   padding: 15px 30px 0 30px;
 } 
 
@@ -58,14 +58,12 @@ h1, h2 {
 }
 
 .actions {
-  margin-top: 15px;
+  margin: 15px 0 15px;
 }
-
 
 .button_to {
   margin: 30px 0 0 50px;
 }
-
 
 /**** Footer ****/
 
@@ -80,17 +78,13 @@ h1, h2 {
   color: #34495e;
 }
 
-.form-group label {
+.navbar-form .form-group label {
   color: #9d9d9d;
 }
 
-h1, h2, .form-group label {
+h1, h2, .form-group label, .form-contol {
   font-family: verdana, arial, helvetica, sans-serif;
   font-weight: normal;
-}
-
-.edit_product {
-  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 .form-control {
