@@ -13,7 +13,7 @@
 <body>
 
 <div class="page-wrap">
-  <nav class="navbar navbar-inverse" role="navigation">
+  <nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -30,10 +30,10 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
         
-          <li class: "nav-item"><%= link_to "Sales", "#Sales", class: "nav-link" %></li>
-          <li class: "nav-item"><%= link_to "Contact", static_pages_contact_path, class: "nav-link" %></li>
-          <li class: "nav-item"><%= link_to "Products", products_path, class: "nav-link" %></li>
-          <li class: "nav-item"><%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
+          <li class= "nav-item"><%= link_to "Sales", "#Sales", class: "nav-link" %></li>
+          <li class= "nav-item"><%= link_to "Contact", static_pages_contact_path, class: "nav-link" %></li>
+          <li class= "nav-item"><%= link_to "Products", products_path, class: "nav-link" %></li>
+          <li class= "nav-item"><%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
        
           <div class="form-group">
             <%= label_tag(:q, "Search for:") %>
