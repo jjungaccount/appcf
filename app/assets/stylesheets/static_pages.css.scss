@@ -35,6 +35,19 @@ html, body {
   padding: 15px;
 }
 
+.nav .btn, .nav .btn:hover, .nav .btn:focus, .nav .btn:active {
+  color: #fff;
+  background-color: #1BBD3B; 
+  border-color: none;
+}
+
+.nav li a:hover, .nav li a:focus, .nav li a:active {
+  color: #fff;
+  background-color: transparent; 
+  border-color: none;
+}
+
+
 /**** Generic styles ****/
 
 h1, .container-fluid {
@@ -48,6 +61,22 @@ h2 {
 h1, .static-page a, .item, .form_box, #notice, .site-footer p {
   padding: 15px 30px 0 30px;
 } 
+
+.static-page .btn-primary, .static-page .btn-default { 
+  color: #fff;
+  background-color: #1BBD3B; 
+  border-color: #9d9d9d;
+} 
+
+.static-page .btn-primary:hover, .static-page .btn-primary:focus, .static-page .btn-primary:active, .static-page .btn-default:hover, .static-page .btn-default:focus, .static-page .btn-default:active {
+  color: #333;
+  border-color: #9d9d9d; 
+  background: #e5ede8;
+}
+
+.static-page a {
+  background: transparent;
+}
 
 /**** Forms styles ****/
 
@@ -73,7 +102,6 @@ h1, .static-page a, .item, .form_box, #notice, .site-footer p {
   float: left;
 }
 
-
 /**** Products page ****/
 
 .img-responsive {
@@ -90,21 +118,17 @@ h1, .static-page a, .item, .form_box, #notice, .site-footer p {
 
 /*Typography*/
 
-h1, .form-group label, .site-footer p{
-  color: #34495e;
+.nav-item, .nav-item:visited {
+  color: #9d9d9d;
 }
 
-.navbar-form label, .nav li a {
-  color: #9d9d9d;
+h1, .site-footer p{
+  color: #34495e;
 }
 
 h1, h2, .form-group label, .form-control, item_show,  {
   font-family: verdana, arial, helvetica, sans-serif;
   font-weight: normal;
-}
-
-.form-control {
-  color: #325050;
 }
 
 h1 {
@@ -115,6 +139,10 @@ h2 {
   font-size: 1em;
 }
 
+.form-control {
+  color: #325050;
+}
+
 .description {
   color: gray;
 }
@@ -123,6 +151,3 @@ h2 {
   color: #78c042;
 }
 
-.static-page a, .static-page a:visited, .static-page a:hover, .nav li a {
-  background-color: transparent;
-}

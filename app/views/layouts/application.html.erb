@@ -36,18 +36,18 @@
           <li class= "nav-item"><%= form_tag("/products", method: "get", class: "navbar-form navbar-right", role: "search") do %>
        
           <div class="form-group">
-            <%= label_tag(:q, "Search for:") %>
+            <%= label_tag(:q, "Search for:", class: "nav-item") %>
             <%= text_field_tag :q, params[:q], class: "form-control form-control-sm", type: "search"%>
           </div>
-          <%= submit_tag "Search", class: "btn btn-success"%>
+          <%= submit_tag "Search", class: "btn btn-primary"%>
           <% end %></li> 
         </ul>
         <ul class="nav pull-right">
           <li>
           <% if user_signed_in? %>
-            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>
+            <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "nav-item") %>
           <% else %>
-            <%= link_to('Login', new_user_session_path) %>
+            <%= link_to('Login', new_user_session_path, class: "nav-item") %>
           <% end %>
           </li>
         </ul>
