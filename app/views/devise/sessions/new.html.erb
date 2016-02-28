@@ -1,7 +1,7 @@
 <h1>Log in</h1>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form_box col-md-4">
+  <div class="form-horizontal col-md-4">
     <div class="form-group">
       <%= f.label :email %><br />
       <%= f.email_field :email, autofocus: true, class: "form-control" %>
@@ -19,7 +19,7 @@
       </div>
     <% end -%>
 
-    <div class="actions">
+    <div class="form-group actions">
       <%= f.submit 'Log in', class: "btn btn-primary" %>
     </div>
   </div>
