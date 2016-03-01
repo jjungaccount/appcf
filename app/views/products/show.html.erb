@@ -1,44 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<div class="form-horizontal col-lg-4 col-sm-6 col-xs-8">
-  <p>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </p>
+<form class="col-sm-6">
+  <div class="panel panel-primary">
+    <div class="panel-body">
 
-  <p>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </p>
+      <p>
+        <strong>Name:</strong>
+        <%= @product.name %>
+      </p>
 
-  <p>
-    <strong>Image url:</strong>
-    <%= @product.image_url %>
-  </p>
+      <p>
+        <strong>Description:</strong>
+        <%= @product.description %>
+      </p>
 
-  <p>
-    <strong>Color:</strong>
-    <%= @product.colour %>
-  </p>
+      <p>
+        <strong>Image url:</strong>
+        <%= @product.image_url %>
+      </p>
 
-  <p>
-    <strong>Product year:</strong>
-    <%= @product.product_year %>
-  </p>
+      <p>
+        <strong>Color:</strong>
+        <%= @product.colour %>
+      </p>
 
-  <p>
-    <strong>Price:</strong>
-    <%= @product.price %>
-  </p>
+      <p>
+        <strong>Product year:</strong>
+        <%= @product.product_year %>
+      </p>
 
-  <p>
-    <strong>Sold:</strong>
-    <%= @product.sold_date %>
-  </p>
+      <p>
+        <strong>Price:</strong>
+        <%= @product.price %>
+      </p>
 
-</div>
+      <p>
+        <strong>Sold:</strong>
+        <%= @product.sold_date %>
+      </p>
+
+    </div>
+  </div>
+</form>
 
 <div class="col-sm-12">
   <%= button_to 'Edit', edit_product_path(@product), method: "get", class: "btn btn-default" %>
   <%= button_to 'Back', products_path, method: "get", class: "btn btn-default" %>
 </div>
+
+

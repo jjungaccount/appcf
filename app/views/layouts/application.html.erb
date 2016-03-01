@@ -42,7 +42,7 @@
           <%= submit_tag "Search", class: "btn btn-default"%>
           <% end %></li> 
         </ul>
-        <ul class="nav pull-right">
+        <ul class="nav navbar-nav pull-right">
           <li>
           <% if user_signed_in? %>
             <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "nav-item") %>

@@ -1,14 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+<div class="col-sm-6">
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <div class="form-group col-sm-6">
+        <div class="col-xs-12">
+          <strong>First name:</strong>
+          <%= @user.first_name %>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <div class="col-xs-12">
+          <strong>Last name:</strong>
+          <%= @user.last_name %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="col-sm-12">
+  <%= button_to 'Edit', edit_user_path(@user), method: "get", class: "btn btn-default" %> 
+  <%= button_to 'Back', users_path, method: "get", class: "btn btn-default" %>
+</div>

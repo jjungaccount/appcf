@@ -35,10 +35,6 @@ body {
   border-bottom: 1px solid #eee;
 }
 
-.nav li a {
-  padding: 15px;
-}
-
 .nav li a:hover, .nav li a:focus, .nav li a:active {
   color: #fff;
   background-color: transparent; 
@@ -47,15 +43,15 @@ body {
 
 /**** Generic styles ****/
 
-h1, .container-fluid {
-  margin: 0px 15px 0px 15px;
+h1 {
+  padding-left: 15px;
 }
 
 h2 {
   margin-top: 0;
 }
 
-h1, .static-page a, .item, .form-horizontal, .site-footer p {
+.static-page a, .site-footer p {
   padding: 15px 30px 0 30px;
 } 
 
@@ -63,33 +59,6 @@ h1, .static-page a, .item, .form-horizontal, .site-footer p {
   background: transparent;
 }
 
-.panel {
-  margin: 30px 50px 0px 50px;
-}
-
-/**** Forms styles ****/
-
-.form-horizontal {
-  margin: 15px 15px 0 45px;
-}
-
-.form-horizontal, .panel_accent {
-  border: 1px solid #9d9d9d;
-  background: #e5ede8;
-}
-
-.panel-default {
-  border-style: none;
-}
-
-.actions {
-  margin: 15px 0 15px;
-}
-
-.button_to {
-  margin: 15px 0 0 50px;
-  float: left;
-}
 
 /**** Products page ****/
 

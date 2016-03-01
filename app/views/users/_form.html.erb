@@ -1,4 +1,4 @@
-<%= form_for(@user) do |f| %>
+<%= form_for @user, :html => {class: "edit_user col-lg-8"} do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -11,15 +11,27 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </div>
-  <div class="form-group">
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <div class="form-group col-sm-6">
+        <div class="col-xs-12">
+          <%= f.label :first_name %><br>
+          <%= f.text_field :first_name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <div class="col-xs-12">
+          <%= f.label :last_name %><br>
+          <%= f.text_field :last_name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="form-group col-sm-6">
+        <div class="col-xs-12">
+          <div class="actions">
+            <%= f.submit 'Update User', class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 <% end %>
