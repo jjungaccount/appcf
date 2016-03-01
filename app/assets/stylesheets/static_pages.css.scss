@@ -10,6 +10,10 @@ html, body {
   height: 100%;
 }
 
+body {
+  padding-top: 50px;
+}
+
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
@@ -65,7 +69,7 @@ h1, .static-page a, .item, .form-horizontal, .site-footer p {
 
 /**** Forms styles ****/
 
-.form-horizontal, #notice {
+.form-horizontal {
   margin: 15px 15px 0 45px;
 }
 
