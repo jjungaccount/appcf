@@ -3,8 +3,8 @@
 <form class="col-sm-6">
   <div class="panel panel-primary">
     <div class="panel-body">
-      <table>
-        <thead>
+      <table class="table">
+        <thead class="thead-default">
           <tr>
             <th>First name</th>
             <th>Last name</th>
@@ -29,5 +29,5 @@
 </form>
 
 <div class="col-sm-12">
-  <%= button_to 'New User', new_user_path, method: "get", class: "btn btn-primary" %>
+  <%= link_to 'New User', new_user_path, type: "button", class: "btn btn-default" %>
 </div>

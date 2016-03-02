@@ -19,6 +19,6 @@
 </div>
 
 <div class="col-sm-12">
-  <%= button_to 'Edit', edit_user_path(@user), method: "get", class: "btn btn-default" %> 
-  <%= button_to 'Back', users_path, method: "get", class: "btn btn-default" %>
+  <%= link_to 'Edit', edit_user_path(@user), type: "button", class: "btn btn-default" %> 
+  <%= link_to 'Back', users_path, type: "button", class: "btn btn-default" %>
 </div>

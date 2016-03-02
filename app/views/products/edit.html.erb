@@ -3,7 +3,7 @@
 
 <%= render 'form' %>
 
-<div class="col-sm-6">
-  <%= button_to 'Show', @product, method: "get", type: "button", class: "btn btn-default" %>
-  <%= button_to 'Back', products_path, method: "get", type: "button", class: "btn btn-default" %>
+<div class="col-sm-12">
+  <%= link_to 'Show', @product, type: "button", class: "btn btn-default" %>
+  <%= link_to 'Back', products_path, type: "button", class: "btn btn-default" %>
 </div>
