@@ -47,7 +47,7 @@ h1 {
   padding-left: 15px;
 }
 
-h2 {
+h3 {
   margin-top: 0;
 }
 
@@ -59,13 +59,8 @@ h2 {
   background: transparent;
 }
 
-
-/**** Products page ****/
-
-.img-responsive {
-  max-height: 150px;
-  border: 1px solid #9d9d9d;
-  padding: 15px;
+.item {
+  padding: 30px;
 }
 
 /**** Footer ****/
@@ -80,11 +75,11 @@ h2 {
   color: #9d9d9d;
 }
 
-h1, .site-footer p{
+h1, .site-footer p, .well {
   color: #34495e;
 }
 
-h1, h2, .form-group label, .form-control, item_show,  {
+h1, h2, h3, h4, .form-group label, .form-control, .comments {
   font-family: verdana, arial, helvetica, sans-serif;
   font-weight: normal;
 }
@@ -97,6 +92,14 @@ h2 {
   font-size: 1em;
 }
 
+h3, .price-lg {
+  font-size: 1.1em;
+}
+
+.marker {
+  font-size: 1.25em;
+}
+
 .form-control {
   color: #325050;
 }
@@ -105,7 +108,7 @@ h2 {
   color: gray;
 }
 
-.price {
+.price, .price-lg {
   color: #78c042;
 }
 
