@@ -9,19 +9,19 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       if Rails.env.development? == true
-        @products = Product.where("name LIKE ?", "%#{search_term}%")
+        @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(page: params[:page], per_page: 4)
       else
-        @products = Product.where("name ilike ?", "%#{search_term}%")
+        @products = Product.where("name ilike ?", "%#{search_term}%").paginate(page: params[:page], per_page: 4)
       end
     else
-      @products = Product.where("sold_date is null")
+      @products = Product.where("sold_date is null").paginate(page: params[:page], per_page: 4)
     end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC")
+    @comments = @product.comments.all.paginate(page: params[:page], per_page: 5).order("created_at DESC")
   end
 
   # GET /products/new
