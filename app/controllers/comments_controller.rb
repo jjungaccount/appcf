@@ -9,9 +9,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to @product, notice: 'Review was created successfully.' }
         format.json { render :show, status: :created, location: @product }
       else
-        @errMsg = || "/my_default_link"  'Review was not saved successfully.'
         if @comment.errors.any?
-          @errMsg = @comment.errors.full_messages.first
           format.html { redirect_to @product, alert: @comment.errors.full_messages.first }
           format.json { render json: @comment.errors, status: :unprocessable_entity }
         else
