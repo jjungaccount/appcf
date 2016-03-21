@@ -3,14 +3,14 @@ FactoryGirl.define do
   sequence(:email) { |n| "user{n}@example.com" }
   factory :user do
     email 
-    password "testtest"
+    password "testtest3"
     first_name "Joe"
-    last_name "Guy"
+    last_name "Person"
     admin false
   end   
-  factory :admin do
+  factory :admin, class: User do
     email 
-    password "testtest"
+    password "testtest2"
     first_name "Admin"
     last_name "Admin"
     admin true
