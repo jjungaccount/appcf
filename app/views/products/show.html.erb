@@ -30,8 +30,10 @@
     <%= render 'new_comment' %>
     <%= render 'comments' %>
 
-    <%= link_to 'Edit', edit_product_path(@product), type: "button", class: "btn btn-default"%>
-    <%= link_to 'Back', products_path, type: "button", class: "btn btn-default" %>
+    <div class="editback">
+      <%= link_to 'Edit', edit_product_path(@product), type: "button", class: "btn btn-default" %>
+      <%= link_to 'Back', products_path, type: "button", class: "btn btn-default" %>
+    </div>
   </div>
 </div>
 
