@@ -36,7 +36,7 @@ body {
 }
 
 .navbar-brand {
-  padding: 5px 5px 5px 30px;
+  padding: 5px 5px 5px 15px;
 }
 
 .nav li a:hover, .nav li a:focus, .nav li a:active {
@@ -65,6 +65,10 @@ h3 {
 
 .item {
   padding: 30px;
+}
+
+.panel {
+  margin-top: 15px;
 }
 
 .comment .panel-heading {
