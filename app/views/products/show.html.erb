@@ -1,6 +1,6 @@
 
 <div class="container-fluid">
-  <div class="col-md-4 col-sm-6 col-xs-12">
+  <div class="col-md-5 col-sm-6 col-xs-12">
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="item">
@@ -10,8 +10,8 @@
         <div class="panel-footer">
           <div class="row">
             <h3 class="col-xs-9"><%= @product.name %></h3>
-            <p class="col-xs-1 price-lg">$<%= @product.price %></p>
-            <a href="#" class="col-xs-1"><span class="glyphicon glyphicon-map-marker"></span></a>
+            <p class="col-xs-3 price"><%= number_to_currency(@product.price/100) %>
+            <a href="#"><span class="glyphicon glyphicon-map-marker"></span></a></p>
           </div>
           <p class="description"><%= @product.description %></p>
           <div class="row">
@@ -22,6 +22,10 @@
         </div>
       </div>
     </div>
+
+    <%= form_tag "/payments/create" do %>
+      <%= render partial: 'shared/stripe_checkout_button' %>
+    <% end %>
 
     <%= render 'new_comment' %>
     <%= render 'comments' %>
