@@ -10,7 +10,7 @@
         <div class="panel-footer">
           <div class="row">
             <h3 class="col-xs-9"><%= @product.name %></h3>
-            <p class="col-xs-3 price"><%= number_to_currency(@product.price/100) %>
+            <p class="col-xs-3 price"><%= number_to_currency @product.price, precision: 2 %>
             <a href="#"><span class="glyphicon glyphicon-map-marker"></span></a></p>
           </div>
           <p class="description"><%= @product.description %></p>
