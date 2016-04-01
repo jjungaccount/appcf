@@ -9,12 +9,17 @@ class ProductsController < ApplicationController
     if params[:q]
       search_term = params[:q]
       if Rails.env.development? == true
+        logger.debug "search for #{search_term}"
+        byebug
         @products = Product.where("name LIKE ?", "%#{search_term}%").paginate(page: params[:page], per_page: 4)
+        logger.debug "showing products matching #{search_term}"
+        byebug
       else
         @products = Product.where("name ilike ?", "%#{search_term}%").paginate(page: params[:page], per_page: 4)
       end
     else
       @products = Product.where("sold_date is null").paginate(page: params[:page], per_page: 4)
+      logger.debug "showing all unsold products"
     end
   end
 

@@ -12,6 +12,8 @@ class PaymentsController < ApplicationController
         :description => params[:stripeEmail]
       )
 
+      logger.debug "attempting to charge #{charge.amount.to_s}"
+
       if charge.paid
         Order.create(product_id: @product.id, user_id: @user.id, total: charge.amount)
         Product.update(@product.id, sold_date: Date.today)
