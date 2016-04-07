@@ -6,4 +6,13 @@ $(document).on('ready page:load', function(){
       return $(this).attr('data-score');
     }
   });
+  $('.img-zoom').elevateZoom({ 
+    zoomWindowPosition: 5,
+    zoomWindowFadeIn: 500, 
+    zoomWindowFadeOut: 500, 
+    lensFadeIn: 500, 
+    lensFadeOut: 500,
+    zoomWindowWidth: 300, 
+    zoomWindowHeight: 250 });
 });
+

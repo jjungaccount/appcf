@@ -4,7 +4,7 @@
     <div class="panel panel-default">
       <div class="panel-body">
         <div class="item">
-          <%= image_tag(@product.image_url, class: "img-responsive") %>
+          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data: { zoom_image: '/assets/' + @product.image_url}) %>
         </div>
 
         <div class="panel-footer">
