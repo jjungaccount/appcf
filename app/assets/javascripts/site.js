@@ -1,7 +1,12 @@
 $(document).on('ready page:load ajaxSuccess', function(){
-  $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]', enable_half: true });
-  $('.rated').raty( { path: '/assets', 
+  $('.rating').raty( { 
+    path: '/assets', 
+    scoreName: 'comment[rating]' 
+  });
+  $('.rated').raty( { 
+    path: '/assets', 
     readOnly: true, 
+    enable_half: true,
     score: function(){
       return $(this).attr('data-score');
     }
