@@ -1,4 +1,4 @@
-$(document).on('ready page:load', function(){
+$(document).on('ready page:load ajaxSuccess', function(){
   $('.rating').raty( { path: '/assets', scoreName: 'comment[rating]', enable_half: true });
   $('.rated').raty( { path: '/assets', 
     readOnly: true, 
