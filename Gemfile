@@ -73,5 +73,3 @@ gem 'responders', '~> 2.0'
 gem 'stripe'
 
 gem 'brakeman', :require => false
-
-gem 'chosen-rails'
