@@ -21,15 +21,13 @@ app.controller('OrdersCtrl', ['$scope', function($scope){
   
   $scope.addOrder = function(){
 
-    if(!$scope.newOrder.product_id || $scope.newOrder.total === ''){return;}
     order = models.orders.save($scope.newOrder, function(){
       recent_order = models.orders.get({id: order.id});
       $scope.orders.push(recent_order);
       $scope.newOrder = '';
     });
 
-    $scope.newOrder = {};
-  };
+  }
   $scope.deleteOrder = function(order){
     models.orders.delete(order);
     $scope.orders.splice($scope.orders.indexOf(order), 1);
