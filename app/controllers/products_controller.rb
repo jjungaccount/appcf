@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   before_filter :authenticate_user!, :except => [:index, :show]
   load_and_authorize_resource
+  respond_to :json, :html
   
   # GET /products
   # GET /products.json
@@ -20,6 +21,7 @@ class ProductsController < ApplicationController
       @products = Product.where("sold_date is null").paginate(page: params[:page], per_page: 4)
       logger.debug "showing all unsold products"
     end
+    respond_with @products
   end
 
   # GET /products/1
