@@ -1,15 +1,15 @@
 
-
-<div class="item col-sm-6 col-md-3">
-  <%= link_to "/products/" + product.id.to_s do %>
-    <%= image_tag(product.image_url, class: "img-responsive") %>
-  <% end %>
-  <h2><%= product.name %></h2>
-  <% logger.debug "Showing product: #{product.name}" %>
-  <p class="description"><%= product.description %></p>
-  <p class="price"><%= number_to_currency product.price, precision: 2 %></p>
-</div>
-
+<% cache product do %>
+  <div class="item col-sm-6 col-md-3">
+    <%= link_to "/products/" + product.id.to_s do %>
+      <%= image_tag(product.image_url, class: "img-responsive") %>
+    <% end %>
+    <h2><%= product.name %></h2>
+    <% logger.debug "Showing product: #{product.name}" %>
+    <p class="description"><%= product.description %></p>
+    <p class="price"><%= number_to_currency product.price, precision: 2 %></p>
+  </div>
+<% end %>
 
 
 

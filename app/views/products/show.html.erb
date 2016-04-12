@@ -3,23 +3,25 @@
   <div class="col-md-5 col-sm-6 col-xs-12">
     <div class="panel panel-default">
       <div class="panel-body">
-        <div class="item">
-          <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data: { zoom_image: '/assets/' + @product.image_url}) %>
-        </div>
+        <% cache @product do %>
+          <div class="item">
+            <%= image_tag(@product.image_url, class: "img-responsive img-zoom", data: { zoom_image: '/assets/' + @product.image_url}) %>
+          </div>
 
-        <div class="panel-footer">
-          <div class="row">
-            <h3 class="col-xs-9"><%= @product.name %></h3>
-            <p class="col-xs-3 price"><%= number_to_currency @product.price, precision: 2 %>
-            <a href="#"><span class="glyphicon glyphicon-map-marker"></span></a></p>
+          <div class="panel-footer">
+            <div class="row">
+              <h3 class="col-xs-9"><%= @product.name %></h3>
+              <p class="col-xs-3 price"><%= number_to_currency @product.price, precision: 2 %>
+              <a href="#"><span class="glyphicon glyphicon-map-marker"></span></a></p>
+            </div>
+            <p class="description"><%= @product.description %></p>
+            <div class="row">
+              <p class="col-xs-12">Average Rating: 
+                <div class="rated col-xs-12" data-score="<%= @product.average_rating %>"></div>
+              </p>
+            </div>
           </div>
-          <p class="description"><%= @product.description %></p>
-          <div class="row">
-            <p class="col-xs-12">Average Rating: 
-              <div class="rated col-xs-12" data-score="<%= @product.average_rating %>"></div>
-            </p>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
 
