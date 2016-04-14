@@ -74,8 +74,8 @@ gem 'stripe'
 
 gem 'brakeman', :require => false
 
-gem 'chosen-rails'
-
 gem 'angularjs-rails'
 
 gem 'dalli'
+
+gem 'redis-rails'

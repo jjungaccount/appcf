@@ -16,5 +16,4 @@
 //= require angular-resource
 //= require turbolinks
 //= require_tree .
-//= require chosen-jquery
 //= require scaffold

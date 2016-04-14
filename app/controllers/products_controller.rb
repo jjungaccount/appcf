@@ -3,7 +3,8 @@ class ProductsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
   load_and_authorize_resource
   respond_to :json, :html
-  
+  include ProductsHelper
+
   # GET /products
   # GET /products.json
   def index
@@ -27,7 +28,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.all.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+    # @comments = @product.comments.all.paginate(page: params[:page], per_page: 5).order("created_at DESC")
+    fetch_comments
   end
 
   # GET /products/new
